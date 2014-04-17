@@ -9423,7 +9423,6 @@ static int wl_construct_reginfo(struct wl_priv *wl, s32 bw_cap)
 
 	}
 	__wl_band_2ghz.n_channels = n_2g;
-	__wl_band_5ghz_a.n_channels = n_5g;
 	kfree(pbuf);
 	return err;
 }
@@ -9518,7 +9517,6 @@ s32 wl_update_wiphybands(struct wl_priv *wl)
 	}
 
 	wiphy->bands[IEEE80211_BAND_2GHZ] = bands[IEEE80211_BAND_2GHZ];
-	wiphy->bands[IEEE80211_BAND_5GHZ] = bands[IEEE80211_BAND_5GHZ];
 
 
 	wiphy_apply_custom_regulatory(wiphy, &brcm_regdom);
